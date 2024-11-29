@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Inventário</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Inventário</h1>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <input type="text" id="filter-name" placeholder="Filtrar por nome do produto">
+      <input type="date" id="filter-start-date">
+      <input type="date" id="filter-end-date">
+      <button id="apply-filters">Aplicar Filtros</button>
+    </div>
+
+    <!-- Formulário de Inclusão -->
+    <div class="form-container">
+      <h2>Adicionar Novo Produto</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nome do produto" required>
+        <input type="number" id="product-quantity" placeholder="Quantidade" required>
+        <input type="date" id="product-date" required>
+        <button type="submit">Adicionar Produto</button>
+      </form>
+    </div>
+
+    <!-- Tabela de Inventário -->
+    <table id="inventory-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Data de Adição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Registros serão inseridos aqui -->
+      </tbody>
+    </table>
+
+    <!-- Gráfico -->
+    <div class="chart-container">
+      <canvas id="product-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
